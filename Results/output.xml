@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.9.2 on win32)" generated="20220318 23:09:30.817" rpa="false" schemaversion="2">
+<suite id="s1" name="GoogleSearchSuit" source="D:\Praca\Automation\pythonProject3\TestSuites\GoogleSearchSuit.robot">
+<test id="s1-t1" name="Search text in google">
+<kw name="Open main page google" library="GoogleSearch">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220318 23:09:30.986" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" starttime="20220318 23:09:30.985" endtime="20220318 23:09:32.801"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Google</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220318 23:09:32.804" level="INFO">Page title is 'Google'.</msg>
+<status status="PASS" starttime="20220318 23:09:32.801" endtime="20220318 23:09:32.804"/>
+</kw>
+<status status="PASS" starttime="20220318 23:09:30.985" endtime="20220318 23:09:32.804"/>
+</kw>
+<kw name="Accept cookies" library="GoogleSearch">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=L2AGLb</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220318 23:09:32.805" level="INFO">Clicking button 'id=L2AGLb'.</msg>
+<status status="PASS" starttime="20220318 23:09:32.805" endtime="20220318 23:09:32.844"/>
+</kw>
+<status status="PASS" starttime="20220318 23:09:32.804" endtime="20220318 23:09:32.844"/>
+</kw>
+<kw name="Generate Names" library="Generator">
+<var>@{list}</var>
+<arg>10</arg>
+<msg timestamp="20220318 23:09:32.866" level="INFO">@{list} = [ Maureen Palmer | Fonda Enriquez | Melissa Maynard | Henrietta Cremer | Brian Samples | Emma Burnette | Virgil Little | Sally Trujillo | Mollie Meredith | Anastacia Tripp ]</msg>
+<status status="PASS" starttime="20220318 23:09:32.845" endtime="20220318 23:09:32.866"/>
+</kw>
+<for flavor="IN">
+<var>${item}</var>
+<value>@{list}</value>
+<iter>
+<var name="${item}">Maureen Palmer</var>
+<kw name="Search for item" library="GoogleSearch">
+<arg>${item}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>class=gLFyf</arg>
+<arg>${SEARCH QUERY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220318 23:09:32.868" level="INFO">Typing text 'Maureen Palmer' into text field 'class=gLFyf'.</msg>
+<status status="PASS" starttime="20220318 23:09:32.867" endtime="20220318 23:09:32.925"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220318 23:09:32.925" level="INFO">Clicking button 'xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]'.</msg>
+<status status="PASS" starttime="20220318 23:09:32.925" endtime="20220318 23:09:34.452"/>
+</kw>
+<status status="PASS" starttime="20220318 23:09:32.867" endtime="20220318 23:09:34.452"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220318 23:09:37.457" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220318 23:09:34.452" endtime="20220318 23:09:37.457"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20220318 23:09:37.457" endtime="20220318 23:09:37.627"/>
+</kw>
+<status status="PASS" starttime="20220318 23:09:32.867" endtime="20220318 23:09:37.627"/>
+</iter>
+<iter>
+<var name="${item}">Fonda Enriquez</var>
+<kw name="Search for item" library="GoogleSearch">
+<arg>${item}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>class=gLFyf</arg>
+<arg>${SEARCH QUERY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220318 23:09:37.628" level="INFO">Typing text 'Fonda Enriquez' into text field 'class=gLFyf'.</msg>
+<status status="PASS" starttime="20220318 23:09:37.627" endtime="20220318 23:09:37.689"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220318 23:09:37.690" level="INFO">Clicking button 'xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]'.</msg>
+<status status="PASS" starttime="20220318 23:09:37.690" endtime="20220318 23:09:39.962"/>
+</kw>
+<status status="PASS" starttime="20220318 23:09:37.627" endtime="20220318 23:09:39.962"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220318 23:09:42.969" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220318 23:09:39.962" endtime="20220318 23:09:42.969"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20220318 23:09:42.969" endtime="20220318 23:09:43.118"/>
+</kw>
+<status status="PASS" starttime="20220318 23:09:37.627" endtime="20220318 23:09:43.118"/>
+</iter>
+<iter>
+<var name="${item}">Melissa Maynard</var>
+<kw name="Search for item" library="GoogleSearch">
+<arg>${item}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>class=gLFyf</arg>
+<arg>${SEARCH QUERY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220318 23:09:43.119" level="INFO">Typing text 'Melissa Maynard' into text field 'class=gLFyf'.</msg>
+<status status="PASS" starttime="20220318 23:09:43.119" endtime="20220318 23:09:43.177"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220318 23:09:43.177" level="INFO">Clicking button 'xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]'.</msg>
+<status status="PASS" starttime="20220318 23:09:43.177" endtime="20220318 23:09:44.692"/>
+</kw>
+<status status="PASS" starttime="20220318 23:09:43.118" endtime="20220318 23:09:44.692"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220318 23:09:47.705" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220318 23:09:44.692" endtime="20220318 23:09:47.705"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20220318 23:09:47.705" endtime="20220318 23:09:47.861"/>
+</kw>
+<status status="PASS" starttime="20220318 23:09:43.118" endtime="20220318 23:09:47.861"/>
+</iter>
+<iter>
+<var name="${item}">Henrietta Cremer</var>
+<kw name="Search for item" library="GoogleSearch">
+<arg>${item}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>class=gLFyf</arg>
+<arg>${SEARCH QUERY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220318 23:09:47.861" level="INFO">Typing text 'Henrietta Cremer' into text field 'class=gLFyf'.</msg>
+<status status="PASS" starttime="20220318 23:09:47.861" endtime="20220318 23:09:47.919"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220318 23:09:47.920" level="INFO">Clicking button 'xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]'.</msg>
+<status status="PASS" starttime="20220318 23:09:47.919" endtime="20220318 23:09:48.778"/>
+</kw>
+<status status="PASS" starttime="20220318 23:09:47.861" endtime="20220318 23:09:48.778"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220318 23:09:51.781" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220318 23:09:48.778" endtime="20220318 23:09:51.781"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20220318 23:09:51.781" endtime="20220318 23:09:51.927"/>
+</kw>
+<status status="PASS" starttime="20220318 23:09:47.861" endtime="20220318 23:09:51.927"/>
+</iter>
+<iter>
+<var name="${item}">Brian Samples</var>
+<kw name="Search for item" library="GoogleSearch">
+<arg>${item}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>class=gLFyf</arg>
+<arg>${SEARCH QUERY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220318 23:09:51.928" level="INFO">Typing text 'Brian Samples' into text field 'class=gLFyf'.</msg>
+<status status="PASS" starttime="20220318 23:09:51.928" endtime="20220318 23:09:51.982"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220318 23:09:51.982" level="INFO">Clicking button 'xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]'.</msg>
+<status status="PASS" starttime="20220318 23:09:51.982" endtime="20220318 23:09:52.769"/>
+</kw>
+<status status="PASS" starttime="20220318 23:09:51.927" endtime="20220318 23:09:52.769"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220318 23:09:55.784" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220318 23:09:52.769" endtime="20220318 23:09:55.784"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20220318 23:09:55.784" endtime="20220318 23:09:55.938"/>
+</kw>
+<status status="PASS" starttime="20220318 23:09:51.927" endtime="20220318 23:09:55.938"/>
+</iter>
+<iter>
+<var name="${item}">Emma Burnette</var>
+<kw name="Search for item" library="GoogleSearch">
+<arg>${item}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>class=gLFyf</arg>
+<arg>${SEARCH QUERY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220318 23:09:55.938" level="INFO">Typing text 'Emma Burnette' into text field 'class=gLFyf'.</msg>
+<status status="PASS" starttime="20220318 23:09:55.938" endtime="20220318 23:09:55.990"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220318 23:09:55.991" level="INFO">Clicking button 'xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]'.</msg>
+<status status="PASS" starttime="20220318 23:09:55.990" endtime="20220318 23:09:56.731"/>
+</kw>
+<status status="PASS" starttime="20220318 23:09:55.938" endtime="20220318 23:09:56.731"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220318 23:09:59.737" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220318 23:09:56.731" endtime="20220318 23:09:59.737"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20220318 23:09:59.737" endtime="20220318 23:09:59.891"/>
+</kw>
+<status status="PASS" starttime="20220318 23:09:55.938" endtime="20220318 23:09:59.891"/>
+</iter>
+<iter>
+<var name="${item}">Virgil Little</var>
+<kw name="Search for item" library="GoogleSearch">
+<arg>${item}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>class=gLFyf</arg>
+<arg>${SEARCH QUERY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220318 23:09:59.891" level="INFO">Typing text 'Virgil Little' into text field 'class=gLFyf'.</msg>
+<status status="PASS" starttime="20220318 23:09:59.891" endtime="20220318 23:09:59.944"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220318 23:09:59.944" level="INFO">Clicking button 'xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]'.</msg>
+<status status="PASS" starttime="20220318 23:09:59.944" endtime="20220318 23:10:00.694"/>
+</kw>
+<status status="PASS" starttime="20220318 23:09:59.891" endtime="20220318 23:10:00.694"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220318 23:10:03.696" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220318 23:10:00.694" endtime="20220318 23:10:03.696"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20220318 23:10:03.696" endtime="20220318 23:10:03.849"/>
+</kw>
+<status status="PASS" starttime="20220318 23:09:59.891" endtime="20220318 23:10:03.849"/>
+</iter>
+<iter>
+<var name="${item}">Sally Trujillo</var>
+<kw name="Search for item" library="GoogleSearch">
+<arg>${item}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>class=gLFyf</arg>
+<arg>${SEARCH QUERY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220318 23:10:03.850" level="INFO">Typing text 'Sally Trujillo' into text field 'class=gLFyf'.</msg>
+<status status="PASS" starttime="20220318 23:10:03.850" endtime="20220318 23:10:03.904"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220318 23:10:03.904" level="INFO">Clicking button 'xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]'.</msg>
+<status status="PASS" starttime="20220318 23:10:03.904" endtime="20220318 23:10:04.537"/>
+</kw>
+<status status="PASS" starttime="20220318 23:10:03.849" endtime="20220318 23:10:04.537"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220318 23:10:07.539" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220318 23:10:04.537" endtime="20220318 23:10:07.539"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20220318 23:10:07.539" endtime="20220318 23:10:07.684"/>
+</kw>
+<status status="PASS" starttime="20220318 23:10:03.849" endtime="20220318 23:10:07.684"/>
+</iter>
+<iter>
+<var name="${item}">Mollie Meredith</var>
+<kw name="Search for item" library="GoogleSearch">
+<arg>${item}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>class=gLFyf</arg>
+<arg>${SEARCH QUERY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220318 23:10:07.685" level="INFO">Typing text 'Mollie Meredith' into text field 'class=gLFyf'.</msg>
+<status status="PASS" starttime="20220318 23:10:07.684" endtime="20220318 23:10:07.741"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220318 23:10:07.741" level="INFO">Clicking button 'xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]'.</msg>
+<status status="PASS" starttime="20220318 23:10:07.741" endtime="20220318 23:10:08.653"/>
+</kw>
+<status status="PASS" starttime="20220318 23:10:07.684" endtime="20220318 23:10:08.653"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220318 23:10:11.658" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220318 23:10:08.653" endtime="20220318 23:10:11.658"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20220318 23:10:11.658" endtime="20220318 23:10:11.800"/>
+</kw>
+<status status="PASS" starttime="20220318 23:10:07.684" endtime="20220318 23:10:11.800"/>
+</iter>
+<iter>
+<var name="${item}">Anastacia Tripp</var>
+<kw name="Search for item" library="GoogleSearch">
+<arg>${item}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>class=gLFyf</arg>
+<arg>${SEARCH QUERY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220318 23:10:11.801" level="INFO">Typing text 'Anastacia Tripp' into text field 'class=gLFyf'.</msg>
+<status status="PASS" starttime="20220318 23:10:11.801" endtime="20220318 23:10:11.857"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220318 23:10:11.858" level="INFO">Clicking button 'xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]'.</msg>
+<status status="PASS" starttime="20220318 23:10:11.858" endtime="20220318 23:10:12.575"/>
+</kw>
+<status status="PASS" starttime="20220318 23:10:11.801" endtime="20220318 23:10:12.575"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220318 23:10:15.579" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220318 23:10:12.575" endtime="20220318 23:10:15.579"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20220318 23:10:15.579" endtime="20220318 23:10:15.730"/>
+</kw>
+<status status="PASS" starttime="20220318 23:10:11.801" endtime="20220318 23:10:15.730"/>
+</iter>
+<status status="PASS" starttime="20220318 23:09:32.867" endtime="20220318 23:10:15.730"/>
+</for>
+<kw name="Sleep 5s">
+<msg timestamp="20220318 23:10:15.732" level="FAIL">No keyword with name 'Sleep 5s' found. Did you mean:
+    BuiltIn.Sleep</msg>
+<status status="FAIL" starttime="20220318 23:10:15.732" endtime="20220318 23:10:15.732"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220318 23:10:15.733" endtime="20220318 23:10:17.822"/>
+</kw>
+<status status="FAIL" starttime="20220318 23:09:30.984" endtime="20220318 23:10:17.822">No keyword with name 'Sleep 5s' found. Did you mean:
+    BuiltIn.Sleep</status>
+</test>
+<status status="FAIL" starttime="20220318 23:09:30.818" endtime="20220318 23:10:17.824"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="GoogleSearchSuit">GoogleSearchSuit</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
