@@ -13,6 +13,7 @@ Open main page google
     Title Should Be    Google
 
 Search for item
+    [Arguments]    ${SEARCH QUERY}
     Input Text	class=gLFyf     ${SEARCH QUERY}
     click button    xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]
 
