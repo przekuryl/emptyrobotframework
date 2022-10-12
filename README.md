@@ -1,14 +1,14 @@
 Requirements:
-pip install - r ./Requirements/requirements.txt
+> pip install -r ./Requirements/requirements.txt
 
 Run test suite (cmd command):
-robot -d ./Results ./TestSuites/TestSuite.robot
+> robot -d ./Results ./TestSuites/TestSuite.robot
 
 Get webdrivers (like browsers for automated test):
 One way is to download them manually and them to PATH
 or use webdrivermanager e.g:
 
-pip install webdrivermanager
-webdrivermanager firefox chrome --linkpath /usr/local/bin
+> pip install webdrivermanager
+> webdrivermanager firefox chrome --linkpath /usr/local/bin
 
 
