@@ -9,6 +9,8 @@ One way is to download them manually and them to PATH
 or use webdrivermanager e.g:
 
 > pip install webdrivermanager
+
+after that type:
 > webdrivermanager firefox chrome --linkpath /usr/local/bin
 
 
